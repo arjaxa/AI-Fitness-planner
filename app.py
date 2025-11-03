@@ -55,6 +55,7 @@ custom_splits = {
             {"muscle": "core", "type": "core", "exercise": ["Ab Wheel Rollout"]}
         ]
     }
+      # more variations...
 }
 
 # --------------------------
