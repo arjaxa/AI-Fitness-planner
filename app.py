@@ -4,7 +4,7 @@ import pandas as pd
 
 st.set_page_config(page_title="AI Fitness Planner", page_icon="💪")
 
-st.title("💪 AI Fitness Planner")
+st.title("AI Fitness Planner")
 st.write("Plan personalized workouts based on your goals and preferences.")
 
 # --------------------------
@@ -19,6 +19,37 @@ exercises = {
     "core": ["Plank", "Crunches", "Leg Raises", "Bicycle Crunch", "Russian Twists"],
      "biceps": ["Barbell Curl", "Dumbbell Curl", "Preacher Curl"],
     "triceps": ["Tricep Dips", "Overhead Tricep Extension", "Close Grip Bench Press"]
+}
+
+# --------------------------
+# CUSTOM SPLIT BLUEPRINT
+# --------------------------
+
+custom_splits = {
+    "4 Day Upper Lower (My Custom)": {
+        "Day 1 - Upper (Push)": [
+            {"muscle": "chest", "type": "compound", "exercise": ["Barbell Bench Press", "Incline Dumbbell Press"]},
+            {"muscle": "shoulders", "type": "compound", "exercise": ["Overhead Press"]},
+            {"muscle": "chest", "type": "isolation", "exercise": ["Cable Fly"]},
+            {"muscle": "triceps", "type": "isolation", "exercise": ["Tricep Pushdown"]},
+            {"muscle": "core", "type": "stability", "exercise": ["Plank", "Hanging Leg Raises"]}
+        ],
+        "Day 2 - Lower": [
+            {"muscle": "legs", "type": "compound", "exercise": ["Squats", "Romanian Deadlift"]},
+            {"muscle": "legs", "type": "isolation", "exercise": ["Leg Extension", "Leg Curl"]},
+            {"muscle": "core", "type": "core", "exercise": ["Cable Crunch"]}
+        ],
+        "Day 3 - Upper (Pull)": [
+            {"muscle": "back", "type": "compound", "exercise": ["Deadlift", "Barbell Row"]},
+            {"muscle": "biceps", "type": "isolation", "exercise": ["Barbell Curl", "Hammer Curl"]},
+            {"muscle": "shoulders", "type": "isolation", "exercise": ["Rear Delt Fly"]}
+        ],
+        "Day 4 - Lower": [
+            {"muscle": "legs", "type": "compound", "exercise": ["Front Squat", "Lunges"]},
+            {"muscle": "legs", "type": "isolation", "exercise": ["Calf Raises", "Glute Kickbacks"]},
+            {"muscle": "core", "type": "core", "exercise": ["Ab Wheel Rollout"]}
+        ]
+    }
 }
 
 # --------------------------
