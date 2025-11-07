@@ -35,19 +35,12 @@ custom_splits = {
     },
 
     "4": {"4 Day Upper Lower (pull/leg(q)/push/leg(h) Custom1)": {
-        "Day 1 - Upper (Push)": [
+        "Day 1 - Upper (Back, Triceps)": [
             ["bench press", "db press"],
             ["bb rows", "db rows"]
         ],
         "Day 2 - Lower (Quad, glute, abductor, calve)": [
-            {"muscle": "Quads", "type": "isolation", "exercise": ["Leg extension", "Leg extension"]},
-            {"muscle": "Quads", "type": "compound", "exercise": ["Smith squats", "BB Squats"]},
-            {"muscle": "Quads", "type": "compound", "exercise": ["Hack squats"]},
-            {"muscle": "Glute/abductor", "type": "i/c", "exercise": ["Cable leg abductions"]},
-            {"muscle": "Quads", "type": "isolation/L", "exercise": ["DB Goblet squats"]},
-            {"muscle": "Quads", "type": "compound/L", "exercise": ["DB Lunge"]},
-            {"muscle": "Calves", "type": "i/c", "exercise": ["Seated DB Calves"]},
-            {"muscle": "Calves", "type": "i/c", "exercise": ["Standing calves machine"]}
+            ["Leg extensions 3x12", "Leg extensions 12 + Smith Squats 12] x4 ", "Leg extensions 4x8", "Leg extensions 4x15", "Leg extensions 3x15", "Leg extensions 3x10", "Leg extensions 3x20", "Leg extensions 4x12", "Leg extensions 4x10", "Leg press", "Smit Squats"]
         ],
         "Day 3 - Upper (Pull)": [
             {"muscle": "back", "type": "compound", "exercise": ["Deadlift", "Barbell Row"]},
