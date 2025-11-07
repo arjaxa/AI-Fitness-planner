@@ -2,7 +2,7 @@ import streamlit as st
 import random
 import pandas as pd
 
-st.set_page_config(page_title="AI Fitness Planner", page_icon="💪")
+st.set_page_config(page_title="AI Fitness Planner", page_icon="aris.png")
 
 st.title("AI Fitness Planner")
 st.write("Plan personalized workouts based on your goals and preferences.")
@@ -40,7 +40,7 @@ custom_splits = {
             ["BB Rows (RG) 12 + 10 + 10 + 8"],
             ["Machine rows 12 + Straight arm pulldown 12] x4"]
         ],
-        "Day 2 - Lower (Quad, glute, abductor, calve)": [
+        "Day 2 - Lower (Quad, abductor, calve)": [
             ["Leg extensions 3x12", "Leg extensions 12 + Smith Squats 12] x4 ", "Leg extensions 4x8", "Leg extensions 4x15", "Leg extensions 3x15", "Leg extensions 3x10", "Leg extensions 3x20", "Leg extensions 4x12", "Leg extensions 4x10", "Leg press", "Smit Squats"]
         ],
         "Day 3 - Upper (Pull)": [
