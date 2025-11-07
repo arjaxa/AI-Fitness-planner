@@ -62,6 +62,16 @@ custom_splits = {
             {"muscle": "legs", "type": "isolation", "exercise": ["Calf Raises", "Glute Kickbacks"]},
             {"muscle": "core", "type": "core", "exercise": ["Ab Wheel Rollout"]}
         ]},
+    },
+
+    "5": {
+        "5 Day Split (custom1)": {
+            "Day1": [...],
+            "Day2": [...],
+            "Day3": [...],
+            "Day4": [...],
+            "Day5": [...]
+        }
     }
       # more variations...
 }
