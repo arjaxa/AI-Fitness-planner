@@ -26,7 +26,15 @@ exercises = {
 # --------------------------
 
 custom_splits = {
-    "4 Day Upper Lower (pull/leg(q)/push/leg(h) Custom)": {
+    "3": {
+        "3 Day Push/Pull/Leg split": {
+            "Day1": [...],
+            "Day2": [...],
+            "Day3": [...]
+        }
+    },
+
+    "4": {"4 Day Upper Lower (pull/leg(q)/push/leg(h) Custom1)": {
         "Day 1 - Upper (Push)": [
             {"muscle": "chest", "type": "compound", "exercise": ["Barbell Bench Press", "Incline Dumbbell Press"]},
             {"muscle": "shoulders", "type": "compound", "exercise": ["Overhead Press"]},
@@ -53,7 +61,7 @@ custom_splits = {
             {"muscle": "legs", "type": "compound", "exercise": ["Front Squat", "Lunges"]},
             {"muscle": "legs", "type": "isolation", "exercise": ["Calf Raises", "Glute Kickbacks"]},
             {"muscle": "core", "type": "core", "exercise": ["Ab Wheel Rollout"]}
-        ]
+        ]},
     }
       # more variations...
 }
