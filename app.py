@@ -36,11 +36,8 @@ custom_splits = {
 
     "4": {"4 Day Upper Lower (pull/leg(q)/push/leg(h) Custom1)": {
         "Day 1 - Upper (Push)": [
-            {"muscle": "chest", "type": "compound", "exercise": ["Barbell Bench Press", "Incline Dumbbell Press"]},
-            {"muscle": "shoulders", "type": "compound", "exercise": ["Overhead Press"]},
-            {"muscle": "chest", "type": "isolation", "exercise": ["Cable Fly"]},
-            {"muscle": "triceps", "type": "isolation", "exercise": ["Tricep Pushdown"]},
-            {"muscle": "core", "type": "stability", "exercise": ["Plank", "Hanging Leg Raises"]}
+            ["bench press", "db press"],
+            ["bb rows", "db rows"]
         ],
         "Day 2 - Lower (Quad, glute, abductor, calve)": [
             {"muscle": "Quads", "type": "isolation", "exercise": ["Leg extension", "Leg extension"]},
@@ -108,13 +105,26 @@ days_per_week = st.selectbox("How many days a week do you want to work out?", ["
 available_variations = list(custom_splits[days_per_week].keys())
 selected_split = st.selectbox("Choose your split variation:", available_variations)
 
+
 # Step 3: Generate plan
+import random
+
 if st.button("Generate Plan"):
     selected_plan = custom_splits[days_per_week][selected_split]
     for day, exercises_list in selected_plan.items():
         st.subheader(day)
-        for i, ex in enumerate(exercises_list, start=1):
-            st.write(f"{i}. {ex}")
+        for i, exercise_group in enumerate(exercises_list, start=1):
+            # Pick one random workout from each exercise group
+            if isinstance(exercise_group, list):
+                chosen_ex = random.choice(exercise_group)
+            else:
+                chosen_ex = exercise_group
+            st.write(f"{i}. {chosen_ex}")
+#    selected_plan = custom_splits[days_per_week][selected_split]
+#   for day, exercises_list in selected_plan.items():
+#        st.subheader(day)
+#        for i, ex in enumerate(exercises_list, start=1):
+#            st.write(f"{i}. {ex}")
 
 #split_names = list(custom_splits.keys())
 #selected_split = st.selectbox("Select a split variation:", split_names)
