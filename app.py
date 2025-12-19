@@ -168,6 +168,8 @@ if st.button("Generate Plan"):
             else:
                 chosen_ex = exercise_group
             st.write(f"{i}. {chosen_ex}")
+
+
 #    selected_plan = custom_splits[days_per_week][selected_split]
 #   for day, exercises_list in selected_plan.items():
 #        st.subheader(day)
