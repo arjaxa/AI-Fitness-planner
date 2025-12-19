@@ -37,12 +37,23 @@ custom_splits = {
     "4": {"4 Day Upper Lower (pull/leg(q)/push/leg(h) Custom1)": {
         "Day 1 - Upper (Back, Triceps)": [
             ["lat pulldown | 12x4"],
-            ["BB Rows (RG) 12 + 10 + 10 + 8"],
-            ["Machine rows 12 + Straight arm pulldown 12] x4"],
-            [". . ."]
+            ["BB Rows | 12 + 10 + 10 + 8"],
+            ["H Machine | 12x4", "Single arm cable rows | 12x4"],
+            ["DB Rows | 12x4"],
+            ["Straight arms | 12x3"],
+            ["hyperextensions | 20x4"],
+            ["Cable triceps pulldown | 12x3"],
+            ["DB tricep kickbacks | 8x4"]
         ],
         "Day 2 - Lower (Quad, abductor, calve)": [
-            ["Leg extensions 3x12", "Leg extensions 12 + Smith Squats 12] x4 ", "Leg extensions 4x8", "Leg extensions 4x15", "Leg extensions 3x15", "Leg extensions 3x10", "Leg extensions 3x20", "Leg extensions 4x12", "Leg extensions 4x10", "Leg press", "Smit Squats"]
+            ["Leg extensions 4x12"],
+            ["Smith squats | 12 + 10 + 10 + 8"],
+            ["Smith lunge | 12x4", "Sumo squats | 12x4"],
+            ["Single leg leg press (12 + 20(both))x4", "Goblet squats | 16x4"],
+            ["Leg abduction machine | 16x4"],
+            ["Cable(Knee bent) kick backs | 12x4"],
+            ["Standing calves machine | 20x3"],
+            ["Seated calves | 30x3"]
         ],
         "Day 3 - Upper (Pull)": [
             {"muscle": "back", "type": "compound", "exercise": ["Deadlift", "Barbell Row"]},
