@@ -67,10 +67,15 @@ custom_splits = {
             ["BB Bicep curls | 8x3"],
             ["DB hammer curls 12x3"]
         ],
-        "Day 4 - Lower": [
-            {"muscle": "legs", "type": "compound", "exercise": ["Front Squat", "Lunges"]},
-            {"muscle": "legs", "type": "isolation", "exercise": ["Calf Raises", "Glute Kickbacks"]},
-            {"muscle": "core", "type": "core", "exercise": ["Ab Wheel Rollout"]}
+        "Day 4 - Lower (hamstring, glute)": [
+            ["Hamstring curls | 12x4", "Cable kick backs(straight) | 12x4"],
+            ["BB RDL | 12x4"],
+            ["BB hip thrusts | 12x4", "Cable side kick | 15x3"],
+            ["Bulgarian split squats | 8x3"],
+            ["abduction machine | 15x4"],
+            ["DB lifts | 12x3"],
+            ["DB Step ups | 12x4"],
+            ["Standing calves | 30x3"]
         ]},
     },
 
