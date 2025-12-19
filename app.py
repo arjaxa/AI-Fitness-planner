@@ -66,46 +66,46 @@ custom_splits = {
 
     "4": {"4 Day Upper Lower (pull/leg(q)/push/leg(h) Custom1)": {
         "Day 1 - Upper (Back, Triceps)": [
-            ["lat pulldown | 12x4"],
-            ["BB Rows | 12 + 10 + 10 + 8"],
-            ["H Machine | 12x4", "Single arm cable rows | 12x4"],
-            ["DB Rows | 12x4"],
-            ["Straight arms | 12x3"],
-            ["hyperextensions | 20x4"],
-            ["Cable triceps pulldown | 12x3"],
-            ["DB tricep kickbacks | 8x4"]
+            ["lat pulldown | 12x4"], # Back_compound
+            ["BB Rows | 12 + 10 + 10 + 8"], # Back_compound
+            ["H Machine | 12x4", "Single arm cable rows | 12x4"], # Back_compound/isolation
+            ["DB Rows | 12x4"], # Back_isolation
+            ["Straight arms | 12x3"], # Back_isolation
+            ["hyperextensions | 20x4"], # Back_isolation
+            ["Cable triceps pulldown | 12x3"], # Tricep_isolation
+            ["DB tricep kickbacks | 8x4"] # Tricep_isolation
         ],
         "Day 2 - Lower (Quad, abductor, calve)": [
-            ["Leg extensions 4x12"],
-            ["Smith squats | 12 + 10 + 10 + 8"],
-            ["Smith lunge | 12x4", "Sumo squats | 12x4"],
-            ["Single leg leg press (12 + 20(both))x4", "Goblet squats | 16x4"],
-            ["Leg abduction machine | 16x4"],
-            ["Cable(Knee bent) kick backs | 12x4"],
-            ["Standing calves machine | 20x3"],
-            ["Seated calves | 30x3"]
+            ["Leg extensions 4x12"], # Quad_isolation
+            ["Smith squats | 12 + 10 + 10 + 8"], # Quad_compound
+            ["Smith lunge | 12x4", "Sumo squats | 12x4"], # Quad_compound/isolation
+            ["Single leg leg press (12 + 20(both))x4", "Goblet squats | 16x4"], # Quad_compound/isolation
+            ["Leg abduction machine | 16x4"], # Abductor_isolation
+            ["Cable(Knee bent) kick backs | 12x4"], # Glute_isolation
+            ["Standing calves machine | 20x3"], # Calves_isolation
+            ["Seated calves | 30x3"] # Calves_isolation
         ],
         "Day 3 - Upper (Shoulder, Chest, Bicep)": [
-            ["Smith shoulder press | 12x4", "Seated db shoulder press | 12x4"],
-            ["Cable lateral raises | 12x4"],
-            ["DB Lateral raises | 10x4"],
-            ["DB Front raise | 12x4"],
-            ["Reversed fly machine | 10x3"],
-            ["Cable rear delt | 12x4"],
-            ["DB Chest press | 10x3"],
-            ["DB chest fly | 8x3"],
-            ["BB Bicep curls | 8x3"],
-            ["DB hammer curls 12x3"]
+            ["Smith shoulder press | 12x4", "Seated db shoulder press | 12x4"], # Shoulder_compound
+            ["Cable lateral raises | 12x4"], # Shoulder_isolation
+            ["DB Lateral raises | 10x4"], # Shoulder_isolation
+            ["DB Front raise | 12x4"], # Shoulder_isolation
+            ["Reversed fly machine | 10x3"], # Shoulder_isolation
+            ["Cable rear delt | 12x4"], # Shoulder_isolation
+            ["DB Chest press | 10x3"], # Chest_compound
+            ["DB chest fly | 8x3"], # Chest_isolation
+            ["BB Bicep curls | 8x3"], # Bicep_isolation
+            ["DB hammer curls 12x3"] # Bicep_isolation
         ],
         "Day 4 - Lower (hamstring, glute)": [
-            ["Hamstring curls | 12x4", "Cable kick backs(straight) | 12x4"],
-            ["BB RDL | 12x4"],
-            ["BB hip thrusts | 12x4", "Cable side kick | 15x3"],
-            ["Bulgarian split squats | 8x3"],
-            ["abduction machine | 15x4"],
-            ["DB lifts | 12x3"],
-            ["DB Step ups | 12x4"],
-            ["Standing calves | 30x3"]
+            ["Hamstring curls | 12x4"], # Hamstring_isolation
+            ["BB RDL | 12x4"], # Hmastring_compound
+            ["BB hip thrusts | 12x4", "Cable side kick | 15x3"], # Glute_compound
+            ["Bulgarian split squats | 8x3"], # Glute_isolation
+            ["abduction machine | 15x4"], # Glute_isolation
+            ["DB lifts | 12x3"], # Glute_compound
+            ["DB Step ups | 12x4"], # Glute_compound
+            ["Standing calves | 30x3"] # Calve_isolation
         ]},
     },
 
