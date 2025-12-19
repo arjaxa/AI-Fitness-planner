@@ -50,16 +50,16 @@ custom_splits = {
             ["Standing calve machine | 30x3"]
         ],
         "Day 3 - pull (back, biceps, abs)": [
-            ["Smith shoulder press | 12x4", "Seated db shoulder press | 12x4"],
-            ["Cable lateral raises | 12x4"],
-            ["DB Lateral raises | 10x4"],
-            ["DB Front raise | 12x4"],
-            ["Reversed fly machine | 10x3"],
-            ["Cable rear delt | 12x4"],
-            ["DB Chest press | 10x3"],
-            ["DB chest fly | 8x3"],
-            ["BB Bicep curls | 8x3"],
-            ["DB hammer curls 12x3"]
+            ["Lat pull down | 12x3"],
+            ["Row machine | 12x3"],
+            ["Incline db row | 10x3"],
+            ["Bent over db rear delt fly | 12x3"],
+            ["BB Bicep curl | 10x3"],
+            ["DB Hammer curl | 12x3"],
+            ["DB wrist curls | 10x3"],
+            ["Crunch machine | 8x3"],
+            ["Hanging leg raise| 8x3"],
+            ["Mountain climbers 12x3"]
         ]
         }
     },
