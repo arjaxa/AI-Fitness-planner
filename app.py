@@ -40,14 +40,14 @@ custom_splits = {
             ["Triceps pushdown | 8x3"]
         ],
         "Day 2 - Leg (quad, hamstring, glute, calves)": [
-            ["Leg extensions 4x12"],
-            ["Smith squats | 12 + 10 + 10 + 8"],
-            ["Smith lunge | 12x4", "Sumo squats | 12x4"],
-            ["Single leg leg press (12 + 20(both))x4", "Goblet squats | 16x4"],
-            ["Leg abduction machine | 16x4"],
-            ["Cable(Knee bent) kick backs | 12x4"],
-            ["Standing calves machine | 20x3"],
-            ["Seated calves | 30x3"]
+            ["Leg extensions 12x4"],
+            ["Leg press | 10x3"],
+            ["DB lunge | 12x3"],
+            ["BB RDL | 10x3"],
+            ["Hamstring curl machine | 10x4"],
+            ["Abduction machine | 12x4"],
+            ["Cable kickback | 20x3"],
+            ["Standing calve machine | 30x3"]
         ],
         "Day 3 - pull (back, biceps, abs)": [
             ["Smith shoulder press | 12x4", "Seated db shoulder press | 12x4"],
