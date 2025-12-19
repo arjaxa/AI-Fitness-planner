@@ -36,7 +36,7 @@ custom_splits = {
 
     "4": {"4 Day Upper Lower (pull/leg(q)/push/leg(h) Custom1)": {
         "Day 1 - Upper (Back, Triceps)": [
-            ["Reversed grip lat pulldown 12x4"],
+            ["lat pulldown | 12x4"],
             ["BB Rows (RG) 12 + 10 + 10 + 8"],
             ["Machine rows 12 + Straight arm pulldown 12] x4"],
             [". . ."]
