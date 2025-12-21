@@ -157,6 +157,21 @@ selected_split = st.selectbox("Choose your split variation:", available_variatio
 # Step 3: Generate plan
 import random
 
+def generate_plan(selected_split):
+    plan = {}
+
+    for day, exercises in
+    selected_split.items():
+    day_plan = []
+
+    for ex in exercises:
+        if isinstance(ex, list):
+            day_plan.append(random.choice(ex))
+        else:
+            day_plan.append(ex)
+            plan[day] = day_plan
+            return plan
+
 if st.button("Generate Plan"):
     selected_plan = custom_splits[days_per_week][selected_split]
     for day, exercises_list in selected_plan.items():
