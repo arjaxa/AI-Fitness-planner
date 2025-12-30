@@ -1,6 +1,7 @@
 import streamlit as st
 import random
 import pandas as pd
+from splits import custom_splits
 
 st.set_page_config(page_title="AI Fitness Planner", page_icon="aris.png")
 
