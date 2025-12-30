@@ -134,7 +134,17 @@ custom_splits = {
                      ["Seated rear delt fly | 15x4"] # Shoulder_idolation
             ],
             "Day3": [...],
-            "Day4": [...],
+            "Day4": [
+                ["Lat pull down (wide grip) | 12x4"], # Back_compound
+                     ["Row machine | 20x4"], # Back_compound
+                     ["Face pull | 12x3"], # Trap_isolation
+                     ["Straight arm | 12x3"], # Lat_isolation
+                     ["DB Fly back | 12x4"], # ReaeDelt_isolation
+                     ["DB Lateral raises | 15x4"], # Shoulder_isolation
+                     ["BB Shoulder press | 15x4"], # Shoulder_compound
+                     ["Seated lateral raises | 12x4"], # Shoulder_isolation
+                     ["Seated rear delt fly | 15x4"] # Shoulder_idolation
+            ],
             "Day5": [...]
         }
     },
