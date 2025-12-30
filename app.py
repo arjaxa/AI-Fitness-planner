@@ -111,7 +111,16 @@ custom_splits = {
 
     "5": {
         "5 Day Split (custom1)": {
-            "Day1": [...],
+            "Day1": [["Smith squats (wide stance) | 12x4"], # Quad_compound
+                     ["Sumo wide stance db lifts | 20x4"], # Quad_compound
+                     ["RDL | 20x3"], # Hamstring_compound
+                     ["Lying hamstring curls | 12x3"], # Hamstring_isolation
+                     ["BB Hip thrust | 12x4"], # Glute_compound
+                     ["Glute bridge (BB) | 15x4"], # Glute_compound
+                     ["Standing cable hamstring curl | 15x4"], # Hamstring_isolation
+                     ["Smith calf raises | 25x4"] # Calve_isolation
+                     ], 
+              
             "Day2": [...],
             "Day3": [...],
             "Day4": [...],
