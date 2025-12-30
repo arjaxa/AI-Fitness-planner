@@ -56,6 +56,16 @@ splits = {
 
 st.header("🦾 Plan Your Routine")
 
+# user goal
+goal = st.selectbox(
+    "What's your main goal?", ["Hyperthrophy (Muscle Gain)", "Strenght", "Fat Loss"]
+)
+
+# experience level
+experience = st.selectbox(
+    "Select experience level:", ["Beginner", "Intermediate", "Advanced"]
+)
+
 # Choose number of days
 days_per_week = st.selectbox("How many days a week do you want to work out?", ["3", "4", "5", "6"])
 
