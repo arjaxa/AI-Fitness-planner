@@ -154,7 +154,15 @@ custom_splits = {
                      ["Seated lateral raises | 12x4"], # Shoulder_isolation
                      ["Seated rear delt fly | 15x4"] # Shoulder_idolation
             ],
-            "Day5": [...]
+            "Day5": [["Cable kick back | 12x4"], # Glute_isolation
+                     ["DB Single leg hip thrusts | 20x4"], # Glute_compound
+                     ["Hip thusts (BB) | 12x4"], # Glute_compound
+                     ["BB RDL | 12x4"], # Hamstring_compound
+                     ["DB Squats (leaning forward) | 12x4"], # Glute_compound
+                     ["Abduction machine | 25x4"], # Glute_isolation
+                     ["Standing straight leg kick backs (short stance) | 20x4"], # Glute_isolation
+                     ["Smith calf raises | 25x4"] # Calve_isolation 
+                     ]
         }
     },
 
