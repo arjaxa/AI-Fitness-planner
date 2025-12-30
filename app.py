@@ -1,12 +1,19 @@
 import streamlit as st
 import random
 import pandas as pd
+
 from splits import custom_splits
+
+from reportlab.lib.pagesizes import A4
+from reportlab.pdfgen import canvas
+from io import BytesIO
 
 if "generated_plan" not in st.session_state:
     st.session_state.generated_plan = None
 if "last_selection" not in st.session_state:
     st.session_state.last_selection = None
+if "pdf_file" not in st.session_state:
+    st.session_state.pdf_file = None    
 
 st.set_page_config(page_title="AI Fitness Planner", page_icon="aris.png")
 
@@ -81,15 +88,43 @@ def generate_plan(selected_split):
     return plan
 
 # convert plan to text
-def plan_to_text(plan):
-    text = ""
-    for day, exercises in plan.items():
-        text += f"{day}\n"
-        for i, ex in enumerate(exercises, 1):
-            text += f"{i}. {ex}\n"
-        text += "\n"
-    return text        
+#def plan_to_text(plan):
+#    text = ""
+#    for day, exercises in plan.items():
+#        for i, ex in enumerate(exercises, 1):
+#            text += f"{i}. {ex}\n"
+#        text += "\n"
+#    return text
 
+# plan to pdf
+def plan_to_pdf(plan):
+    buffer = BytesIO()
+    c = canvas.Canvas(buffer, pagesize=A4)
+    width, height = A4
+
+    x = 40
+    y = height - 40
+
+    for day, exercises in plan.items():
+        c.setFont("Helvetica-Bold", 12)
+        c.drawString(x, y, day)
+        y -= 20
+
+        c.setFont("Helvetica", 10)
+        for i, ex in enumerate(exercises, 1):
+            c.drawString(x + 10, y, f"{i}. {ex}")
+            y -= 15
+
+            if y < 40:
+                c.showPage()
+                c.setFont("Helvetica", 10)
+                y = height - 40
+
+        y -= 10
+
+    c.save()
+    buffer.seek(0)
+    return buffer
 
 #col1, col2 = st.columns(2)
 #with col1:
@@ -105,8 +140,24 @@ def plan_to_text(plan):
 if st.button("Generate plan"):
     plan = generate_plan(selected_split_data)
     st.session_state.generated_plan = generate_plan(custom_splits[days_per_week][selected_split])
+    st.session_state.pdf_ready = False
+    st.session_state.pdf_file = None
+    # display
     if st.session_state.generated_plan:
-     for day, exercises in st.session_state.generated_plan.items():
+     if st.button("Generate PDF"):
+        st.session_state.pdf_file = plan_to_pdf(
+            st.session_state.generated_plan
+        )
+        st.session_state.pdf_ready = True
+
+    if st.session_state.pdf_ready:
+        st.download_button(
+            "⬇Download PDF",
+            st.session_state.pdf_file,
+            file_name="workout_plan.pdf",
+            mime="application/pdf"
+        )
+    for day, exercises in st.session_state.generated_plan.items():
         st.subheader(day)
         st.divider()
         for i, ex in enumerate(exercises, start=1):
@@ -116,10 +167,19 @@ if st.button("Generate plan"):
             else:
                 st.markdown(f"**{i}. {ex}**")
 
+
 # download converted text
+#if st.session_state.generated_plan:
+#    plan_text = plan_to_text(st.session_state.generated_plan)
+#    st.download_button(label="Download Plan", data=plan_text, file_name="Workout_plan.txt", mime="text/plan")    
+
+# download pdf
 if st.session_state.generated_plan:
-    plan_text = plan_to_text(st.session_state.generated_plan)
-    st.download_button(label="Download Plan", data=plan_text, file_name="Workout_plan.txt", mime="text/plan")                
+    if st.button("Download PDF"):
+        st.session_state.pdf_file = plan_to_pdf(st.session_state.generated_plan)
+    if st.session_state.pdf_file:
+        st.download_button(label="Download PDF", data=st.session_state.pdf_file, file_name="Workout_plan.pdf", mime="application/pdf")    
+               
         
    # for day, exercises in selected_split_data.items():
    #     st.subheader(day)
