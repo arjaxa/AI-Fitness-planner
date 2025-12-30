@@ -3,6 +3,11 @@ import random
 import pandas as pd
 from splits import custom_splits
 
+if "generated_plan" not in st.session_state:
+    st.session_state.generated_plan = None
+if "last_selection" not in st.session_state:
+    st.session_state.last_selection = None
+
 st.set_page_config(page_title="AI Fitness Planner", page_icon="aris.png")
 
 st.title("AI Fitness Planner")
@@ -51,6 +56,10 @@ selected_split = st.selectbox("Choose your split variation:", available_variatio
 
 selected_split_data = custom_splits[days_per_week][selected_split]
 
+currunt_selection = (days_per_week, selected_split)
+if st.session_state.last_selection != currunt_selection:
+    st.session_state.generated_plan = None
+    st.session_state.last_selection = currunt_selection
 
 # Generate plan
 import random
@@ -71,9 +80,13 @@ def generate_plan(selected_split):
 
     return plan
 
+#if st.button("Generate plan"):
+    
 if st.button("Generate plan"):
     plan = generate_plan(selected_split_data)
-    for day, exercises in plan.items():
+    st.session_state.generated_plan = generate_plan(custom_splits[days_per_week][selected_split])
+    if st.session_state.generated_plan:
+     for day, exercises in st.session_state.generated_plan.items():
         st.subheader(day)
         st.divider()
         for i, ex in enumerate(exercises, start=1):
@@ -82,6 +95,16 @@ if st.button("Generate plan"):
                 st.markdown(f"**{i}. {name.strip()}**\n_{details.strip()}_")
             else:
                 st.markdown(f"**{i}. {ex}**")
+        
+   # for day, exercises in selected_split_data.items():
+   #     st.subheader(day)
+   #     st.divider()
+   #     for i, ex in enumerate(exercises, start=1):
+   #         if "|" in ex:
+   #             name, details = ex.split("|", 1)
+   #             st.markdown(f"**{i}. {name.strip()}**\n_{details.strip()}_")
+   #         else:
+   #             st.markdown(f"**{i}. {ex}**")
         
         #for i, ex in enumerate(exercises, start=1):
         #    st.write(f"{i}. {ex}")

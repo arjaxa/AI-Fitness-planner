@@ -3,7 +3,7 @@ custom_splits = {
         "3 Day Push/Pull/Leg split": {
             "Day 1 - push (chest, shoulder, trap, triceps)": [
             ["BB Bench press | 10x3"],
-            ["Incline db bench press | 1ox3"],
+            ["Incline db bench press | 10x3"],
             ["DB Fly | 12x3"],
             ["Seated shoulder press | 12x3"],
             ["Upright db row | 10x3"],
