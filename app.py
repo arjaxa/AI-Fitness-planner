@@ -80,6 +80,17 @@ def generate_plan(selected_split):
 
     return plan
 
+# convert plan to text
+def plan_to_text(plan):
+    text = ""
+    for day, exercises in plan.items():
+        text += f"{day}\n"
+        for i, ex in enumerate(exercises, 1):
+            text += f"{i}. {ex}\n"
+        text += "\n"
+    return text        
+
+
 #col1, col2 = st.columns(2)
 #with col1:
 #    regenerate = st.button("Regenerate", key="regenerate")
@@ -104,6 +115,11 @@ if st.button("Generate plan"):
                 st.markdown(f"**{i}. {name.strip()}**\n_{details.strip()}_")
             else:
                 st.markdown(f"**{i}. {ex}**")
+
+# download converted text
+if st.session_state.generated_plan:
+    plan_text = plan_to_text(st.session_state.generated_plan)
+    st.download_button(label="Download Plan", data=plan_text, file_name="Workout_plan.txt", mime="text/plan")                
         
    # for day, exercises in selected_split_data.items():
    #     st.subheader(day)
