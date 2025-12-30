@@ -80,16 +80,16 @@ def generate_plan(selected_split):
 
     return plan
 
-col1, col2 = st.columns(2)
-with col1:
-    regenerate = st.button("Regenerate", key="regenerate")
-with col2:
-    clear = st.button("Clear", key="clear")
+#col1, col2 = st.columns(2)
+#with col1:
+#    regenerate = st.button("Regenerate", key="regenerate")
+#with col2:
+#    clear = st.button("Clear", key="clear")
 
-if regenerate:
-    st.session_state.generated_plan = generate_plan(custom_splits[days_per_week][selected_split])
-if clear:
-    st.session_state.generated_plan = None    
+#if regenerate:
+#    st.session_state.generated_plan = generate_plan(custom_splits[days_per_week][selected_split])
+#if clear:
+#    st.session_state.generated_plan = None    
     
 if st.button("Generate plan"):
     plan = generate_plan(selected_split_data)
