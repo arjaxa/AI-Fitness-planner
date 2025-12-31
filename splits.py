@@ -1,40 +1,6 @@
 custom_splits = {
     "3": {
-        "3 Day Push/Pull/Leg split": {
-            "Day 1 - push (chest, shoulder, trap, triceps)": [
-            ["BB Bench press | 10x3"],
-            ["Incline db bench press | 10x3"],
-            ["DB Fly | 12x3"],
-            ["Seated shoulder press | 12x3"],
-            ["Upright db row | 10x3"],
-            ["DB Lateral raise | 8x3"],
-            ["BB Shrug | 12x3"],
-            ["DB Overhead tricep extensions | 8x3"],
-            ["Triceps pushdown | 8x3"]
-        ],
-        "Day 2 - Leg (quad, hamstring, glute, calves)": [
-            ["Leg extensions 12x4"],
-            ["Leg press | 10x3"],
-            ["DB lunge | 12x3"],
-            ["BB RDL | 10x3"],
-            ["Hamstring curl machine | 10x4"],
-            ["Abduction machine | 12x4"],
-            ["Cable kickback | 20x3"],
-            ["Standing calve machine | 30x3"]
-        ],
-        "Day 3 - pull (back, biceps, abs)": [
-            ["Lat pull down | 12x3"],
-            ["Row machine | 12x3"],
-            ["Incline db row | 10x3"],
-            ["Bent over db rear delt fly | 12x3"],
-            ["BB Bicep curl | 10x3"],
-            ["DB Hammer curl | 12x3"],
-            ["DB wrist curls | 10x3"],
-            ["Crunch machine | 8x3"],
-            ["Hanging leg raise| 8x3"],
-            ["Mountain climbers 12x3"]
-        ]
-        }
+        "hyperthrophy":#...
     },
 
     "4": {"4 Day Upper Lower (pull/leg(q)/push/leg(h) Custom1)": {
