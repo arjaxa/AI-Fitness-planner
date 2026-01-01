@@ -68,13 +68,18 @@ experience = st.selectbox(
 # Choose number of days
 days_per_week = st.selectbox("How many days a week do you want to work out?", ["3", "4", "5", "6"])
 
+templates = custom_splits[days_per_week]
+[experience.lower()]
+selected_template = random.choice(templates)
+
 # Show split variations only for that day count
-available_variations = list(custom_splits[days_per_week].keys())
-selected_split = st.selectbox("Choose your split variation:", available_variations)
+#available_variations = list(custom_splits[days_per_week].keys())
+#selected_split = st.selectbox("Choose your split variation:", available_variations)
 
-selected_split_data = custom_splits[days_per_week][selected_split]
+#selected_split_data = custom_splits[days_per_week][selected_split]
 
-currunt_selection = (days_per_week, selected_split)
+
+currunt_selection = (selected_template)
 if st.session_state.last_selection != currunt_selection:
     st.session_state.generated_plan = None
     st.session_state.last_selection = currunt_selection
@@ -145,7 +150,7 @@ def plan_to_pdf(plan):
 
 # Generate plan
 if st.button("Generate plan"):
-    st.session_state.generated_plan = generate_plan(selected_split_data, goal, experience)
+    st.session_state.generated_plan = generate_plan(selected_template)
     st.session_state.show_download = False
     #st.session_state.pdf_file = None
 
