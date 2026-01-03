@@ -56,3 +56,25 @@ EXERCISE_LIBRARY = [
         "equipment": "bodyweight"
     }
 ]
+
+
+
+
+
+
+import random
+
+def get_exercise(muscle, ex_type=None, equipment=None):
+    candidates = [
+        ex for ex in EXERCISE_LIBRARY if ex["muscle"] == muscle
+    ]
+
+    if ex_type:
+        candidates = [ex for ex in candidates if ex["type"] == ex_type]
+        if equipment:
+            candidates = [ex for ex in candidates if ex["equipment"] == equipment]
+            if not candidates:
+                raise ValueError(
+                    f"No exercise found for {muscle}, {ex_type}, {equipment}"
+                )  
+            return random.choice(candidates)
