@@ -16,7 +16,7 @@ custom_splits = {
             ["Triceps pushdown | 8x3"]
                     ],
                     "Day 2": [
-            ["Leg extensions 12x4"],
+            ["Leg extensions | 12x4"],
             ["Leg press | 10x3"],
             ["DB lunge | 12x3"],
             ["BB RDL | 10x3"],
