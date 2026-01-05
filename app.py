@@ -7,6 +7,7 @@ from splits import custom_splits
 from reportlab.lib.pagesizes import A4
 from reportlab.pdfgen import canvas
 from io import BytesIO
+from exercise_library import get_exercise
 
 if "generated_plan" not in st.session_state:
     st.session_state.generated_plan = None
@@ -95,7 +96,7 @@ if st.session_state.last_selection != currunt_selection:
     st.session_state.generated_plan = None
     st.session_state.last_selection = currunt_selection
 
-# Generate plan
+# Generate plan   FIX LATER
 import random
 
 def generate_plan(selected_split, goal, experience_key):
@@ -104,23 +105,24 @@ def generate_plan(selected_split, goal, experience_key):
     for day, exercises in selected_split.items():
         day_plan = []
 
-        for ex in exercises:
-            chosen = random.choice(ex)
-            if isinstance(ex, list):
-                if experience_key == "beginner":
-                    chosen += " | 2-3 sets"
-                elif experience_key == "intermediate":
-                    chosen += " | 3-4 sets"
-                else:
-                    chosen += " | 4-5 sets"
-            
-            if goal == "strenght":
-                chosen += " | 4-6 reps"
-            elif goal == "Fat Loss":
-                chosen += " | 12-16 reps"
+        for muscle, ex_type, equipment in exercises:
+            exercise = get_exercise(muscle, ex_type, equipment)
+            name = exercise["name"]
+            if experience == "Beginner":
+                sets = "2-3 sets"
+            elif experience == "Intermediate":
+                sets = "3-4 sets"
             else:
-                chosen += " | 8-12 reps"                
-            day_plan.append(chosen)                
+                sets = "4-5 sets"
+
+            if goal == "strength":
+                reps = "6-8 reps"
+            elif goal == "fat_loss":
+                reps = "12-16 reps"
+            else:
+                reps = "8-12 reps"
+        final_exercise = f"{name} | {sets} | {reps}"
+        day_plan.append(final_exercise)                                      
 
         plan[day] = day_plan
 
@@ -159,7 +161,7 @@ def plan_to_pdf(plan):
 
 
 
-# Generate plan
+# Generate plan BTN
 if st.button("Generate plan"):
     templates = custom_splits[days_per_week][goal][experience_key]
     selected_template = random.choice(templates)
