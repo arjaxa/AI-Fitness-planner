@@ -108,23 +108,27 @@ def generate_plan(selected_split, goal, experience_key):
         for muscle, ex_type, equipment in exercises:
             exercise = get_exercise(muscle, ex_type, equipment)
             name = exercise["name"]
-            if experience == "Beginner":
+
+            # sets
+            if experience_key == "beginner":
                 sets = "2-3 sets"
-            elif experience == "Intermediate":
+            elif experience_key == "intermediate":
                 sets = "3-4 sets"
             else:
                 sets = "4-5 sets"
 
+            # reps
             if goal == "strength":
-                reps = "6-8 reps"
+                reps = "4-6 reps"
             elif goal == "fat_loss":
                 reps = "12-16 reps"
-            else:
+            else:  # hypertrophy
                 reps = "8-12 reps"
-        final_exercise = f"{name} | {sets} | {reps}"
-        day_plan.append(final_exercise)                                      
 
-        plan[day] = day_plan
+            final_exercise = f"{name} | {sets} | {reps}"
+            day_plan.append(final_exercise)  
+
+        plan[day] = day_plan  
 
     return plan
 
