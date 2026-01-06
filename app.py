@@ -96,7 +96,7 @@ if st.session_state.last_selection != currunt_selection:
     st.session_state.generated_plan = None
     st.session_state.last_selection = currunt_selection
 
-# Generate plan   FIX LATER
+# Generate plan   
 import random
 
 def generate_plan(selected_split, goal, experience_key):
