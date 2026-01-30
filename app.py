@@ -137,6 +137,23 @@ def generate_plan(selected_split, goal, experience_key):
 
     return plan
 
+
+
+#OUTPUT CONTRACT:
+
+#generate_plan() returns:
+#dict[str, list[dict]]
+
+#Each exercise dict contains:
+#- name
+#- primary_muscle
+#- secondary_muscle
+#- sets
+#- reps
+#- type
+
+
+
 # plan to pdf
 def plan_to_pdf(plan):
     buffer = BytesIO()
