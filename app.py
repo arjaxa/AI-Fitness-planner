@@ -8,6 +8,7 @@ from reportlab.lib.pagesizes import A4
 from reportlab.pdfgen import canvas
 from io import BytesIO
 from exercise_library import get_exercise
+from validation import validate_template
 
 if "generated_plan" not in st.session_state:
     st.session_state.generated_plan = None
@@ -99,6 +100,7 @@ if st.session_state.last_selection != currunt_selection:
 # Generate plan   
 import random
 
+validate_template(selected_template)
 
 
 
