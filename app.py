@@ -101,7 +101,7 @@ if st.session_state.last_selection != currunt_selection:
 import random
 
 validate_template(selected_template)
-
+from ai_engine import should_superset
 
 
 def generate_plan(selected_split, goal, experience_key):
