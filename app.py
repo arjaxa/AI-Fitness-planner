@@ -90,7 +90,6 @@ from ai_engine import should_superset
 
 
 def generate_plan(selected_split, goal, experience_key):
-    
 
     plan = {}
 
@@ -98,8 +97,7 @@ def generate_plan(selected_split, goal, experience_key):
         day_plan = []
 
         for muscle, ex_type, equipment in exercises:
-            exercise = get_exercise(muscle, ex_type, equipment) # change muscle to primary?
-            name = exercise["name"]
+            exercise = get_exercise(muscle, ex_type, equipment)
 
             # sets
             if experience_key == "beginner":
@@ -114,23 +112,60 @@ def generate_plan(selected_split, goal, experience_key):
                 reps = "4-6 reps"
             elif goal == "fat_loss":
                 reps = "12-16 reps"
-            else:  # hypertrophy
+            else:
                 reps = "8-12 reps"
 
             final_exercise = {
-                "name": name,
+                "name": exercise["name"],
                 "primary": exercise["primary"],
                 "secondary": exercise["secondary"],
                 "type": exercise["type"],
+                "equipment": exercise["equipment"],
                 "sets": sets,
                 "reps": reps
             }
-        
-            day_plan.append(final_exercise)  
 
-        plan[day] = day_plan  
+            day_plan.append(final_exercise)
+
+        # grouping
+        grouped_plan = []
+        i = 0
+
+        while i < len(day_plan):
+
+            # last exercise must be single
+            if i == len(day_plan) - 1:
+                grouped_plan.append({
+                    "mode": "single",
+                    "exercises": [day_plan[i]]
+                })
+                break
+
+            ex1 = day_plan[i]
+            ex2 = day_plan[i + 1]
+
+            if should_superset(ex1, ex2):
+
+                grouped_plan.append({
+                    "mode": "superset",
+                    "exercises": [ex1, ex2]
+                })
+
+                i += 2  # skip next because it was paired
+
+            else:
+
+                grouped_plan.append({
+                    "mode": "single",
+                    "exercises": [ex1]
+                })
+
+                i += 1
+
+        plan[day] = grouped_plan
 
     return plan
+
 
 
 
@@ -149,11 +184,32 @@ def plan_to_pdf(plan):
         y -= 20
 
         c.setFont("Helvetica", 10)
-        for i, ex in enumerate(exercises, 1):
-            c.drawString(x + 10, y, f"{i}. {ex}")
+    for group in exercises:
+
+     if group["mode"] == "superset":
+        c.drawString(x + 10, y, "Superset:")
+        y -= 15
+
+        for ex in group["exercises"]:
+            c.drawString(
+                x + 20,
+                y,
+                f"- {ex['name']} ({ex['sets']} | {ex['reps']})"
+            )
             y -= 15
 
-            if y < 40:
+    else:
+        ex = group["exercises"][0]
+
+        c.drawString(
+            x + 10,
+            y,
+            f"- {ex['name']} ({ex['sets']} | {ex['reps']})"
+        )
+        y -= 15
+
+
+        if y < 40:
                 c.showPage()
                 c.setFont("Helvetica", 10)
                 y = height - 40
@@ -180,16 +236,25 @@ if st.button("Generate plan"):
 if st.session_state.generated_plan:
     for day, exercises in st.session_state.generated_plan.items():
         st.subheader(day)
-        for i, ex in enumerate(exercises, 1):
-            st.markdown(
-                f"**{i}. {ex['name']}**  \n"
-                f"{ex['sets']} • {ex['reps']}  \n"
-                #f"Primary: {ex['primary']} | Secondary: {ex['secondary']}"
+
+        for group in exercises:
+
+            if group["mode"] == "superset":
+                st.markdown("**Superset:**")
+
+                for ex in group["exercises"]:
+                    st.markdown(
+                        f"- **{ex['name']}** ({ex['sets']} • {ex['reps']})"
+                    )
+
+            else:
+                ex = group["exercises"][0]
+
+                st.markdown(
+                    f"**{ex['name']}** ({ex['sets']} • {ex['reps']})"
                 )
-    
-        else:
-            st.markdown(f"**{i}. {ex}**")
-        st.divider()
+
+
 
 
 # export pdf
