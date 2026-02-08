@@ -25,21 +25,6 @@ st.title("AI Fitness Planner")
 st.write("Plan personalized workouts based on your goals and preferences.")
 
 
-# EXERCISE DATABASE
-
-exercises = {
-    "chest": ["Bench Press", "Incline Dumbbell Press", "Push-ups", "Cable Fly", "Chest Dips"],
-    "back": ["Pull-ups", "Deadlift", "Barbell Row", "Lat Pulldown", "Seated Cable Row"],
-    "legs": ["Squats", "Lunges", "Leg Press", "Romanian Deadlift", "Leg Extension"],
-    "shoulders": ["Overhead Press", "Lateral Raises", "Front Raises", "Reverse Fly", "Arnold Press"],
-    "arms": ["Bicep Curls", "Tricep Pushdown", "Hammer Curls", "Skull Crushers", "Concentration Curl"],
-    "core": ["Plank", "Crunches", "Leg Raises", "Bicycle Crunch", "Russian Twists"],
-     "biceps": ["Barbell Curl", "Dumbbell Curl", "Preacher Curl"],
-    "triceps": ["Tricep Dips", "Overhead Tricep Extension", "Close Grip Bench Press"]
-}
-
-
-
 
 # moved to splits.py
 
@@ -145,7 +130,15 @@ Each exercise dict contains:
             else:  # hypertrophy
                 reps = "8-12 reps"
 
-            final_exercise = f"{name} | {sets} | {reps}"
+            final_exercise = {
+                "name": name,
+                "primary": exercise["primary"],
+                "secondary": exercise["secondary"],
+                "type": exercise["type"],
+                "sets": sets,
+                "reps": reps
+            }
+        
             day_plan.append(final_exercise)  
 
         plan[day] = day_plan  
@@ -201,11 +194,14 @@ if st.session_state.generated_plan:
     for day, exercises in st.session_state.generated_plan.items():
         st.subheader(day)
         for i, ex in enumerate(exercises, 1):
-            if "|" in ex:
-                name, details = ex.split("|", 1)
-                st.markdown(f"**{i}. {name.strip()}**\n_{details.strip()}_")
-            else:
-                st.markdown(f"**{i}. {ex}**")
+            st.markdown(
+                f"**{i}. {ex['name']}**  \n"
+                f"{ex['sets']} • {ex['reps']}  \n"
+                #f"Primary: {ex['primary']} | Secondary: {ex['secondary']}"
+                )
+    
+        else:
+            st.markdown(f"**{i}. {ex}**")
         st.divider()
 
 
