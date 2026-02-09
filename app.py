@@ -101,11 +101,11 @@ def generate_plan(selected_split, goal, experience_key):
 
             # sets
             if experience_key == "beginner":
-                sets = "2-3 sets"
+                sets = random.choice([2, 3])
             elif experience_key == "intermediate":
-                sets = "3-4 sets"
+                sets = random.choice([3, 4])
             else:
-                sets = "4-5 sets"
+                sets = random.choice([4, 5])        
 
             # reps
             if goal == "strength":
