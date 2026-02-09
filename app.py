@@ -257,12 +257,12 @@ if st.session_state.generated_plan:
                 # superset workout
                 st.markdown(
                     f"""
-<strong>{workout_number}. {ex['name']}</strong>
-<span style='float:right'>{ex['sets']} x {ex['reps']}</span>
+                   <strong>{workout_number}. {ex['name']}</strong>
+                   <span style='float:right'>{ex['sets']} x {ex['reps']}</span>
 
-**+ {ex2['name']}**
-<span style='float:right'>{ex2['sets']} x {ex2['reps']}</span>
-""",
+                   **+ {ex2['name']}**
+                   <span style='float:right'>{ex2['sets']} x {ex2['reps']}</span>
+                   """,
                     unsafe_allow_html=True
                 )
 
