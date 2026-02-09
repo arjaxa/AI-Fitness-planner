@@ -236,23 +236,46 @@ if st.button("Generate plan"):
 if st.session_state.generated_plan:
     for day, exercises in st.session_state.generated_plan.items():
         st.subheader(day)
+        workout_number = 1
 
         for group in exercises:
 
-            if group["mode"] == "superset":
-                st.markdown("**Superset:**")
-
-                for ex in group["exercises"]:
-                    st.markdown(
-                        f"- **{ex['name']}** ({ex['sets']} • {ex['reps']})"
-                    )
-
-            else:
+            if group["mode"] == "single":
                 ex = group["exercises"][0]
-
+                # single workout
                 st.markdown(
-                    f"**{ex['name']}** ({ex['sets']} • {ex['reps']})"
+                    f"""
+                    <strong>{workout_number}. {ex['name']}</strong>
+                    <span style='float:right'>{ex['sets']} x {ex['reps']}</span>
+                    """,
+                    unsafe_allow_html=True
                 )
+
+            elif group["mode"] == "superset":
+
+                ex1, ex2 = group["exercises"]
+                # superset workout
+                st.markdown(
+                    f"""
+<strong>{workout_number}. {ex['name']}</strong>
+<span style='float:right'>{ex['sets']} x {ex['reps']}</span>
+
+**+ {ex2['name']}**
+<span style='float:right'>{ex2['sets']} x {ex2['reps']}</span>
+""",
+                    unsafe_allow_html=True
+                )
+
+            workout_number += 1
+
+        st.divider()
+
+    
+        
+        
+
+
+            
 
 
 
