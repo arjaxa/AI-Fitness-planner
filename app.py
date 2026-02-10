@@ -10,6 +10,9 @@ from io import BytesIO
 from exercise_library import get_exercise
 from validation import validate_template
 
+from ml_engine import ml_should_superset as should_superset
+
+
 if "generated_plan" not in st.session_state:
     st.session_state.generated_plan = None
 if "last_selection" not in st.session_state:
