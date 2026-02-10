@@ -100,6 +100,148 @@ EXERCISE_LIBRARY = [
         "fatigue": 2,
         "pattern": "lunge"
     },
+    {
+        "name": "Smith split squat",
+        "primary": "quads",
+        "secondary": ["glute"],
+        "type": "compound",
+        "equipment": "machine",
+        "fatigue": 2,
+        "pattern": "lunge"
+    },
+    {
+        "name": "Smith zercher squat",
+        "primary": "quads",
+        "secondary": ["glute"],
+        "type": "compound",
+        "equipment": "machine",
+        "fatigue": 3,
+        "pattern": "squat"
+    },
+
+
+    # Barbell
+    {
+        "name": "BB zercher squat",
+        "primary": "quads",
+        "secondary": ["glute"],
+        "type": "compound",
+        "equipment": "barbell",
+        "fatigue": 3,
+        "pattern": "squat"
+    },
+    {
+        "name": "BB lunge",
+        "primary": "quads",
+        "secondary": ["glute"],
+        "type": "compound",
+        "equipment": "barbell",
+        "fatigue": 2,
+        "pattern": "lunge"
+    },
+    {
+        "name": "BB split squat",
+        "primary": "quads",
+        "secondary": ["glute"],
+        "type": "compound",
+        "equipment": "barbell",
+        "fatigue": 2,
+        "pattern": "lunge"
+    },
+    {
+        "name": "BB squat",
+        "primary": "quads",
+        "secondary": ["glute"],
+        "type": "compound",
+        "equipment": "barbell",
+        "fatigue": 3,
+        "pattern": "squat"
+    },
+    {
+        "name": "BB front squat",
+        "primary": "quads",
+        "secondary": ["glute"],
+        "type": "compound",
+        "equipment": "barbell",
+        "fatigue": 3,
+        "pattern": "squat"
+    },
+    {
+        "name": "BB bench squat",
+        "primary": "quads",
+        "secondary": ["glute"],
+        "type": "compound",
+        "equipment": "barbell",
+        "fatigue": 3,
+        "pattern": "squat"
+    },
+    {
+        "name": "BB zercher squat",
+        "primary": "quads",
+        "secondary": ["glute"],
+        "type": "compound",
+        "equipment": "barbell",
+        "fatigue": 3,
+        "pattern": "squat"
+    },
+    # Cable
+    {
+        "name": "Cable goblet squat",
+        "primary": "quads",
+        "secondary": ["glute"],
+        "type": "compound",
+        "equipment": "cable",
+        "fatigue": 2,
+        "pattern": "squat"
+    },
+
+
+    # Dumbbell
+    {
+        "name": "DB squat",
+        "primary": "quads",
+        "secondary": ["glute"],
+        "type": "compound",
+        "equipment": "dumbbell",
+        "fatigue": 2,
+        "pattern": "squat"
+    },
+    {
+        "name": "DB lunge",
+        "primary": "quads",
+        "secondary": ["glute"],
+        "type": "compound",
+        "equipment": "dumbbell",
+        "fatigue": 2,
+        "pattern": "lunge"
+    },
+    {
+        "name": "DB bulgarian split squats",
+        "primary": "quads",
+        "secondary": ["glute"],
+        "type": "compound",
+        "equipment": "dumbbell",
+        "fatigue": 2,
+        "pattern": "lunge"
+    },
+    {
+        "name": "DB goblet squat",
+        "primary": "quads",
+        "secondary": ["glute"],
+        "type": "compound",
+        "equipment": "dumbbell",
+        "fatigue": 2,
+        "pattern": "squat"
+    },
+    {
+        "name": "DB sumo squat",
+        "primary": "quads",
+        "secondary": ["glute"],
+        "type": "compound",
+        "equipment": "dumbbell",
+        "fatigue": 2,
+        "pattern": "squat"
+    },
 
 
 
