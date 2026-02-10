@@ -1,5 +1,5 @@
 EXERCISE_LIBRARY = [
-    # QUADS
+    # QUADS / Machine
     {
         "name": "Leg Extension",
         "primary": "quads",
@@ -7,8 +7,102 @@ EXERCISE_LIBRARY = [
         "type": "isolation",
         "equipment": "machine",
         "fatigue": 1,
-        "pattern": "extension" # add for all
+        "pattern": "extension" 
     },
+     {
+        "name": "Single leg leg Extension",
+        "primary": "quads",
+        "secondary": [], 
+        "type": "isolation",
+        "equipment": "machine",
+        "fatigue": 1,
+        "pattern": "extension" 
+    },
+    {
+        "name": "Leg Press",
+        "primary": "quads",
+        "secondary": ["hamstring"],
+        "type": "compound",
+        "equipment": "machine",
+        "fatigue": 3,
+        "pattern": "press"
+    },
+    {
+        "name": "Single leg leg Press",
+        "primary": "quads",
+        "secondary": ["hamstring"],
+        "type": "compound",
+        "equipment": "machine",
+        "fatigue": 3,
+        "pattern": "press"
+    },
+    {
+        "name": "Hack squat machine",
+        "primary": "quads",
+        "secondary": [],
+        "type": "compound",
+        "equipment": "machine",
+        "fatigue": 3,
+        "pattern": "press"
+    },
+    # Smith
+    {
+        "name": "Smith machine squat",
+        "primary": "quads",
+        "secondary": ["glute"],
+        "type": "compound",
+        "equipment": "machine",
+        "fatigue": 3,
+        "pattern": "squat"
+    },
+    {
+        "name": "Smith machine front squat",
+        "primary": "quads",
+        "secondary": ["glute"],
+        "type": "compound",
+        "equipment": "machine",
+        "fatigue": 3,
+        "pattern": "squat"
+    },
+    {
+        "name": "Smith sumo squat",
+        "primary": "quads",
+        "secondary": ["glute"],
+        "type": "compound",
+        "equipment": "machine",
+        "fatigue": 2,
+        "pattern": "squat"
+    },
+    {
+        "name": "Smith  squat",
+        "primary": "quads",
+        "secondary": ["glute"],
+        "type": "compound",
+        "equipment": "machine",
+        "fatigue": 2,
+        "pattern": "squat"
+    },
+    {
+        "name": "Smith bulgarian split squat",
+        "primary": "quads",
+        "secondary": ["glute"],
+        "type": "compound",
+        "equipment": "machine",
+        "fatigue": 2,
+        "pattern": "lunge"
+    },
+    {
+        "name": "Smith lunge",
+        "primary": "quads",
+        "secondary": ["glute"],
+        "type": "compound",
+        "equipment": "machine",
+        "fatigue": 2,
+        "pattern": "lunge"
+    },
+
+
+
      {
         "name": "Back Squat",
         "primary": "quads",
@@ -27,15 +121,6 @@ EXERCISE_LIBRARY = [
         "equipment": "dumbbell",
         "fatigue": 2,
         "pattern": "squat"
-    },
-    {
-        "name": "Leg Press",
-        "primary": "quads",
-        "secondary": ["hamstring"],
-        "type": "compound",
-        "equipment": "machine",
-        "fatigue": 3,
-        "pattern": "press"
     },
      {
         "name": "DB Lunge",
