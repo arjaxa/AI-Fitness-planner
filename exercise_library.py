@@ -6,7 +6,8 @@ EXERCISE_LIBRARY = [
         "secondary": [], 
         "type": "isolation",
         "equipment": "machine",
-        "fatigue": 1
+        "fatigue": 1,
+        "pattern": "extension" # add for all
     },
      {
         "name": "Back Squat",
@@ -14,7 +15,9 @@ EXERCISE_LIBRARY = [
         "secondary": ["glute", "hamstring"],
         "type": "compound",
         "equipment": "barbell",
-        "fatigue": 3
+        "fatigue": 3,
+        "pattern": "squat"
+
     },
      {
         "name": "Goblet Squat",
@@ -22,7 +25,8 @@ EXERCISE_LIBRARY = [
         "secondary": ["glute"],
         "type": "compound",
         "equipment": "dumbbell",
-        "fatigue": 2
+        "fatigue": 2,
+        "pattern": "squat"
     },
     {
         "name": "Leg Press",
@@ -30,7 +34,8 @@ EXERCISE_LIBRARY = [
         "secondary": ["hamstring"],
         "type": "compound",
         "equipment": "machine",
-        "fatigue": 3
+        "fatigue": 3,
+        "pattern": "press"
     },
      {
         "name": "DB Lunge",
@@ -38,7 +43,8 @@ EXERCISE_LIBRARY = [
         "secondary": ["glute", "hamstring"],
         "type": "compound",
         "equipment": "dumbbell",
-        "fatigue": 2
+        "fatigue": 2,
+        "pattern": "lunge"
     },
      {
         "name": "Cable Goblet Squat",
@@ -46,7 +52,8 @@ EXERCISE_LIBRARY = [
         "secondary": ["glute"],
         "type": "compound",
         "equipment": "cable",
-        "fatigue": 2
+        "fatigue": 2,
+        "pattern": "squat"
     },
     # HAMSTRING
     {
@@ -55,7 +62,8 @@ EXERCISE_LIBRARY = [
         "secondary": [],
         "type": "isolation",
         "equipment": "machine",
-        "fatigue": 1
+        "fatigue": 1,
+        "pattern": "curl"
     },
      {
         "name": "BB RDL",
@@ -63,7 +71,8 @@ EXERCISE_LIBRARY = [
         "secondary": ["glute", "lowerback"],
         "type": "compound",
         "equipment": "barbell",
-        "fatigue": 3
+        "fatigue": 3,
+        "pattern": "hinge"
     },
      {
         "name": "DB RDL",
@@ -71,7 +80,8 @@ EXERCISE_LIBRARY = [
         "secondary": ["glute"],
         "type": "compound",
         "equipment": "dumbbell",
-        "fatigue": 2
+        "fatigue": 2,
+        "pattern": "hinge"
     },
     {
         "name": "Seated hamstring curl machine",
@@ -79,7 +89,8 @@ EXERCISE_LIBRARY = [
         "secondary": [],
         "type": "isolation",
         "equipment": "machine",
-        "fatigue": 1
+        "fatigue": 1,
+        "pattern": "curl"
     },
     # CALVES
      {
@@ -88,7 +99,8 @@ EXERCISE_LIBRARY = [
         "secondary": [],
         "type": "isolation",
         "equipment": "machine",
-        "fatigue": 1
+        "fatigue": 1,
+        "pattern": "calf"
     },
      {
         "name": "Seated calf machine",
@@ -96,7 +108,8 @@ EXERCISE_LIBRARY = [
         "secondary": [],
         "type": "isolation",
         "equipment": "machine",
-        "fatigue": 1
+        "fatigue": 1,
+        "pattern": "calf"
     },
     # CHEST
      {
@@ -105,7 +118,8 @@ EXERCISE_LIBRARY = [
         "secondary": ["shoulder", "triceps"],
         "type": "compound",
         "equipment": "barbell",
-        "fatigue": 3
+        "fatigue": 3,
+        "pattern": "press"
     },
      {
         "name": "DB Bench Press",
@@ -113,7 +127,8 @@ EXERCISE_LIBRARY = [
         "secondary": ["shoulder", "triceps"],
         "type": "compound",
         "equipment": "dumbbell",
-        "fatigue": 3
+        "fatigue": 3,
+        "pattern": "press"
     },
     {
         "name": "Cable fly",
@@ -121,7 +136,8 @@ EXERCISE_LIBRARY = [
         "secondary": ["shoulder"],
         "type": "isolation",
         "equipment": "cable",
-        "fatigue": 2
+        "fatigue": 2,
+        "pattern": "fly"
     },
      {
         "name": "DB Fly",
@@ -129,7 +145,8 @@ EXERCISE_LIBRARY = [
         "secondary": ["shoulder"],
         "type": "isolation",
         "equipment": "dumbbell",
-        "fatigue": 1
+        "fatigue": 1,
+        "pattern": "fly"
     },
     # SHOULDER
      {
@@ -138,7 +155,8 @@ EXERCISE_LIBRARY = [
         "primary": "shoulder",
         "type": "compound",
         "equipment": "barbell",
-        "fatigue": 2
+        "fatigue": 2,
+        "pattern": "press"
     },
      {
         "name": "DB Shoulder Press",
@@ -146,7 +164,8 @@ EXERCISE_LIBRARY = [
         "secondary": [],
         "type": "isolation",
         "equipment": "dumbbell",
-        "fatigue": 2
+        "fatigue": 2,
+        "pattern": "press"
     },
     {
         "name": "Cable lateral raise",
@@ -154,7 +173,8 @@ EXERCISE_LIBRARY = [
         "primary": "shoulder",
         "type": "isolation",
         "equipment": "cable",
-        "fatigue": 2
+        "fatigue": 2,
+        "pattern": "lateral_raise"
     },
      {
         "name": "DB Fly back",
@@ -162,7 +182,8 @@ EXERCISE_LIBRARY = [
         "secondary": [],
         "type": "isolation",
         "equipment": "dumbbell",
-        "fatigue": 1
+        "fatigue": 1,
+        "pattern": "fly_back"
     },
     # TRICEPS
       {
@@ -171,7 +192,8 @@ EXERCISE_LIBRARY = [
         "secondary": ["chest"],
         "type": "compound",
         "equipment": "barbell",
-        "fatigue": 2
+        "fatigue": 2,
+        "pattern": "press"
     },
      {
         "name": "DB Tricep Kickback",
@@ -179,7 +201,8 @@ EXERCISE_LIBRARY = [
         "secondary": [],
         "type": "isolation",
         "equipment": "dumbbell",
-        "fatigue": 1
+        "fatigue": 1,
+        "pattern": "kickback"
     },
     {
         "name": "Cable Rope Tricep Pushdown",
@@ -187,7 +210,8 @@ EXERCISE_LIBRARY = [
         "secondary": [],
         "type": "isolation",
         "equipment": "cable",
-        "fatigue": 1
+        "fatigue": 1,
+        "pattern": "pushdown"
     },
      {
         "name": "Tricep Dips",
@@ -195,7 +219,8 @@ EXERCISE_LIBRARY = [
         "secondary": ["chest", "shoulder"],
         "type": "compound",
         "equipment": "bodyweight",
-        "fatigue": 3
+        "fatigue": 3,
+        "pattern": "dip"
     },
     # BACK
     {
@@ -204,7 +229,8 @@ EXERCISE_LIBRARY = [
         "secondary": ["biceps"],
         "type": "compound",
         "equipment": "machine",
-        "fatigue": 2
+        "fatigue": 2,
+        "pattern": "pulldown"
     },
     {
         "name": "Seated Cable Row",
@@ -212,7 +238,8 @@ EXERCISE_LIBRARY = [
         "secondary": ["biceps"],
         "type": "compound",
         "equipment": "cable",
-        "fatigue": 2
+        "fatigue": 2,
+        "pattern": "row"
     },
     {
         "name": "Pull-up",
@@ -220,7 +247,8 @@ EXERCISE_LIBRARY = [
         "secondary": ["biceps"],
         "type": "compound",
         "equipment": "bodyweight",
-        "fatigue": 3
+        "fatigue": 3,
+        "pattern": "pullup"
     }
 ]
 

@@ -117,15 +117,15 @@ def generate_plan(selected_split, goal, experience_key):
 
     for day, exercises in selected_split.items():
         day_plan = []
+        used_patterns = set()
 
         for muscle, ex_type, equipment in exercises:
-            exercise = get_exercise(muscle, ex_type, equipment)
+            for _ in range(10):
+                exercise = get_exercise(muscle, ex_type, equipment)
+                if exercise["pattern"] not in used_patterns:
+                    used_patterns.add(exercise["pattern"])
+                    break
 
-            # sets
-            # removed        
-
-            # reps
-            # removed
 
             final_exercise = {
                 "name": exercise["name"],
