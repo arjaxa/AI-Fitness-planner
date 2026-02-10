@@ -2,7 +2,7 @@ custom_splits = {
     "3": {
         "hypertrophy": {
             "beginner": [
-                # split/template 1
+                # split 1 / PPL
                 {
                     "Day 1": [
             ("chest", "compound", "barbell"),
