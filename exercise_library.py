@@ -570,12 +570,30 @@ EXERCISE_LIBRARY = [
         "fatigue": 1,
         "pattern": "calf"
     },
+    {
+        "name": "Standing smith calf raise",
+        "primary": "calf",
+        "secondary": [],
+        "type": "isolation",
+        "equipment": "machine",
+        "fatigue": 1,
+        "pattern": "calf"
+    },
      {
         "name": "Seated calf machine",
         "primary": "calf",
         "secondary": [],
         "type": "isolation",
         "equipment": "machine",
+        "fatigue": 1,
+        "pattern": "calf"
+    },
+    {
+        "name": "Seated DB calf raise",
+        "primary": "calf",
+        "secondary": [],
+        "type": "isolation",
+        "equipment": "dumbbell",
         "fatigue": 1,
         "pattern": "calf"
     },
