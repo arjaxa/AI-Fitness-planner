@@ -765,15 +765,33 @@ EXERCISE_LIBRARY = [
     # SHOULDER
      {
         "name": "BB Shoulder Press",
-        "secondary": ["triceps"],
+        "secondary": [],
         "primary": "shoulder",
-        "type": "compound",
+        "type": "isolation",
         "equipment": "barbell",
-        "fatigue": 2,
+        "fatigue": 3,
+        "pattern": "press"
+    },
+    {
+        "name": "Seated smith Shoulder Press",
+        "secondary": [],
+        "primary": "shoulder",
+        "type": "isolation",
+        "equipment": "machine",
+        "fatigue": 3,
+        "pattern": "press"
+    },
+    {
+        "name": "Shoulder press machine",
+        "secondary": [],
+        "primary": "shoulder",
+        "type": "isolation",
+        "equipment": "machine",
+        "fatigue": 3,
         "pattern": "press"
     },
      {
-        "name": "DB Shoulder Press",
+        "name": "Seated DB Shoulder Press",
         "primary": "shoulder",
         "secondary": [],
         "type": "isolation",
@@ -782,23 +800,150 @@ EXERCISE_LIBRARY = [
         "pattern": "press"
     },
     {
-        "name": "Cable lateral raise",
+        "name": "Seated DB front raise",
+        "primary": "shoulder_f",
         "secondary": [],
-        "primary": "shoulder",
+        "type": "isolation",
+        "equipment": "dumbbell",
+        "fatigue": 2,
+        "pattern": "raise"
+    },
+    {
+        "name": "DB front raise",
+        "primary": "shoulder_f",
+        "secondary": [],
+        "type": "isolation",
+        "equipment": "dumbbell",
+        "fatigue": 2,
+        "pattern": "raise"
+    },
+    {
+        "name": "Cable front raise",
+        "primary": "shoulder_f",
+        "secondary": [],
         "type": "isolation",
         "equipment": "cable",
         "fatigue": 2,
-        "pattern": "lateral_raise"
+        "pattern": "raise"
+    },
+    {
+        "name": "BB front raise",
+        "primary": "shoulder_f",
+        "secondary": [],
+        "type": "isolation",
+        "equipment": "barbell",
+        "fatigue": 2,
+        "pattern": "raise"
+    },
+    {
+        "name": "BB upright row",
+        "primary": "shoulder_f",
+        "secondary": [],
+        "type": "isolation",
+        "equipment": "barbell",
+        "fatigue": 2,
+        "pattern": "raise"
+    },
+    {
+        "name": "DB upright row",
+        "primary": "shoulder_f",
+        "secondary": [],
+        "type": "isolation",
+        "equipment": "dumbbell",
+        "fatigue": 2,
+        "pattern": "raise"
+    },
+    {
+        "name": "Cable upright row",
+        "primary": "shoulder_f",
+        "secondary": [],
+        "type": "isolation",
+        "equipment": "cable",
+        "fatigue": 2,
+        "pattern": "raise"
+    },
+    {
+        "name": "Seated DB lateral raise",
+        "primary": "shoulder_l",
+        "secondary": [],
+        "type": "isolation",
+        "equipment": "dumbbell",
+        "fatigue": 2,
+        "pattern": "raise"
+    },
+    {
+        "name": "DB lateral raise",
+        "primary": "shoulder_l",
+        "secondary": [],
+        "type": "isolation",
+        "equipment": "dumbbell",
+        "fatigue": 2,
+        "pattern": "raise"
+    },
+    {
+        "name": "Cable lateral raise",
+        "secondary": [],
+        "primary": "shoulder_l",
+        "type": "isolation",
+        "equipment": "cable",
+        "fatigue": 2,
+        "pattern": "raise"
     },
      {
         "name": "DB Fly back",
-        "primary": "shoulder",
+        "primary": "shoulder_r",
         "secondary": [],
         "type": "isolation",
         "equipment": "dumbbell",
         "fatigue": 1,
-        "pattern": "fly_back"
+        "pattern": "fly"
     },
+    {
+        "name": "Seated DB rear delt fly",
+        "primary": "shoulder_r",
+        "secondary": [],
+        "type": "isolation",
+        "equipment": "dumbbell",
+        "fatigue": 1,
+        "pattern": "fly"
+    },
+    {
+        "name": "Bent-over DB rear delt fly",
+        "primary": "shoulder_r",
+        "secondary": [],
+        "type": "isolation",
+        "equipment": "dumbbell",
+        "fatigue": 1,
+        "pattern": "fly"
+    },
+    {
+        "name": "DB rear delt press",
+        "primary": "shoulder_r",
+        "secondary": [],
+        "type": "isolation",
+        "equipment": "dumbbell",
+        "fatigue": 1,
+        "pattern": "fly"
+    },
+    {
+        "name": "Cable rear delt fly",
+        "primary": "shoulder_r",
+        "secondary": [],
+        "type": "isolation",
+        "equipment": "cable",
+        "fatigue": 1,
+        "pattern": "fly"
+    },
+    {
+        "name": "Cable rear delt fly (single arm)",
+        "primary": "shoulder_r",
+        "secondary": [],
+        "type": "isolation",
+        "equipment": "cable",
+        "fatigue": 1,
+        "pattern": "fly"
+    },
+    
     # TRICEPS
       {
         "name": "BB Skull Crusher",
