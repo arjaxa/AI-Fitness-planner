@@ -681,13 +681,58 @@ EXERCISE_LIBRARY = [
         "fatigue": 3,
         "pattern": "press"
     },
-     {
+    {
+        "name": "Incline BB Bench Press",
+        "primary": "chest",
+        "secondary": ["shoulder", "triceps"],
+        "type": "compound",
+        "equipment": "barbell",
+        "fatigue": 3,
+        "pattern": "press"
+    },
+    {
         "name": "DB Bench Press",
         "primary": "chest",
         "secondary": ["shoulder", "triceps"],
         "type": "compound",
         "equipment": "dumbbell",
+        "fatigue": 2,
+        "pattern": "press"
+    },
+    {
+        "name": "Incline DB Bench Press",
+        "primary": "chest",
+        "secondary": ["shoulder", "triceps"],
+        "type": "compound",
+        "equipment": "dumbbell",
+        "fatigue": 2,
+        "pattern": "press"
+    },
+    {
+        "name": "Smith Bench Press",
+        "primary": "chest",
+        "secondary": ["shoulder", "triceps"],
+        "type": "compound",
+        "equipment": "barbell",
         "fatigue": 3,
+        "pattern": "press"
+    },
+    {
+        "name": "Incline Smith Bench Press",
+        "primary": "chest",
+        "secondary": ["shoulder", "triceps"],
+        "type": "compound",
+        "equipment": "barbell",
+        "fatigue": 3,
+        "pattern": "press"
+    },
+     {
+        "name": "Parallel DB Bench Press",
+        "primary": "chest",
+        "secondary": ["shoulder"],
+        "type": "compound",
+        "equipment": "dumbbell",
+        "fatigue": 2,
         "pattern": "press"
     },
     {
@@ -701,6 +746,15 @@ EXERCISE_LIBRARY = [
     },
      {
         "name": "DB Fly",
+        "primary": "chest",
+        "secondary": ["shoulder"],
+        "type": "isolation",
+        "equipment": "dumbbell",
+        "fatigue": 1,
+        "pattern": "fly"
+    },
+    {
+        "name": "Incline DB Fly",
         "primary": "chest",
         "secondary": ["shoulder"],
         "type": "isolation",
