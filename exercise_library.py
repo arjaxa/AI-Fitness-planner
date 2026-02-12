@@ -606,6 +606,98 @@ EXERCISE_LIBRARY = [
         "fatigue": 1,
         "pattern": "calf"
     },
+    #GLUTE
+    {
+        "name": "DB bulgarian split squats",
+        "primary": "glute",
+        "secondary": [],
+        "type": "isolation",
+        "equipment": "dumbbell",
+        "fatigue": 2,
+        "pattern": "lunge"
+    },
+    {
+        "name": "BB bulgarian split squats",
+        "primary": "glute",
+        "secondary": [],
+        "type": "isolation",
+        "equipment": "barbell",
+        "fatigue": 3,
+        "pattern": "lunge"
+    },
+    {
+        "name": "Smith bulgarian split squats",
+        "primary": "glute",
+        "secondary": [],
+        "type": "isolation",
+        "equipment": "machine",
+        "fatigue": 3,
+        "pattern": "lunge"
+    },
+    {
+        "name": "DB single leg hip thrust",
+        "primary": "glute",
+        "secondary": [],
+        "type": "isolation",
+        "equipment": "dumbbell",
+        "fatigue": 2,
+        "pattern": "hinge"
+    },
+    {
+        "name": "BB hip thrust",
+        "primary": "glute",
+        "secondary": ["hamstring"],
+        "type": "compound",
+        "equipment": "barbell",
+        "fatigue": 3,
+        "pattern": "hinge"
+    },
+    {
+        "name": "Smith hip thrust",
+        "primary": "glute",
+        "secondary": ["hamstring"],
+        "type": "compound",
+        "equipment": "machine",
+        "fatigue": 3,
+        "pattern": "hinge"
+    },
+    {
+        "name": "Cable kickback",
+        "primary": "glute",
+        "secondary": [],
+        "type": "isolation",
+        "equipment": "cable",
+        "fatigue": 2,
+        "pattern": "hinge"
+    },
+    {
+        "name": "Cable kickback (straight leg)",
+        "primary": "glute",
+        "secondary": [],
+        "type": "isolation",
+        "equipment": "cable",
+        "fatigue": 2,
+        "pattern": "hinge"
+    },
+    {
+        "name": "Cable kickback (knee bent)",
+        "primary": "glute",
+        "secondary": [],
+        "type": "isolation",
+        "equipment": "cable",
+        "fatigue": 2,
+        "pattern": "hinge"
+    },
+    {
+        "name": "Cable (knee height) kickback",
+        "primary": "glute",
+        "secondary": [],
+        "type": "isolation",
+        "equipment": "cable",
+        "fatigue": 2,
+        "pattern": "hinge"
+    },
+
     # ABDUCTOR/ADDUCTOR
     {
         "name": "Seated abduction machine",
@@ -669,6 +761,43 @@ EXERCISE_LIBRARY = [
         "equipment": "cable",
         "fatigue": 2,
         "pattern": "adduction"
+    },
+    #ABS
+    {
+        "name": "Cable standing crunch",
+        "primary": "abs",
+        "secondary": [],
+        "type": "isolation",
+        "equipment": "cable",
+        "fatigue": 2,
+        "pattern": "crunch"
+    },
+    {
+        "name": "Kneeling cable crunch",
+        "primary": "abs",
+        "secondary": [],
+        "type": "isolation",
+        "equipment": "cable",
+        "fatigue": 2,
+        "pattern": "crunch"
+    },
+    {
+        "name": "Hanging leg raise",
+        "primary": "abs",
+        "secondary": [],
+        "type": "isolation",
+        "equipment": "bodyweight",
+        "fatigue": 2,
+        "pattern": "crunch"
+    },
+    {
+        "name": "Bench ins & outs",
+        "primary": "abs",
+        "secondary": [],
+        "type": "isolation",
+        "equipment": "bodyweight",
+        "fatigue": 2,
+        "pattern": "crunch"
     },
 
     # CHEST
@@ -963,7 +1092,62 @@ EXERCISE_LIBRARY = [
         "fatigue": 1,
         "pattern": "fly"
     },
-    
+    # BICEPS
+    {
+        "name": "BB bicep curls",
+        "primary": "biceps",
+        "secondary": [],
+        "type": "isolation",
+        "equipment": "barbell",
+        "fatigue": 3,
+        "pattern": "curl"
+    },
+    {
+        "name": "DB bicep curls",
+        "primary": "biceps",
+        "secondary": [],
+        "type": "isolation",
+        "equipment": "dumbbell",
+        "fatigue": 2,
+        "pattern": "curl"
+    },
+    {
+        "name": "DB concentration bicep curls",
+        "primary": "biceps",
+        "secondary": [],
+        "type": "isolation",
+        "equipment": "dumbbell",
+        "fatigue": 2,
+        "pattern": "curl"
+    },
+    {
+        "name": "Cable (straight bar) bicep curls",
+        "primary": "biceps",
+        "secondary": [],
+        "type": "isolation",
+        "equipment": "cable",
+        "fatigue": 2,
+        "pattern": "curl"
+    },
+    {
+        "name": "Cable rope bicep curls",
+        "primary": "biceps",
+        "secondary": [],
+        "type": "isolation",
+        "equipment": "cable",
+        "fatigue": 2,
+        "pattern": "curl"
+    },
+    {
+        "name": "DB hammer curls",
+        "primary": "biceps",
+        "secondary": [],
+        "type": "isolation",
+        "equipment": "dumbbell",
+        "fatigue": 2,
+        "pattern": "curl"
+    },
+
     # TRICEPS
       {
         "name": "BB Skull Crusher",
@@ -1264,6 +1448,15 @@ EXERCISE_LIBRARY = [
         "equipment": "cable",
         "fatigue": 2,
         "pattern": "row"
+    },
+    {
+        "name": "Hyperextension",
+        "primary": "lower_back",
+        "secondary": [],
+        "type": "isolation",
+        "equipment": "bodyweight",
+        "fatigue": 3,
+        "pattern": "hinge"
     },
     {
         "name": "Pull-up",
