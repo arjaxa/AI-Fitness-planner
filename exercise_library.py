@@ -1490,8 +1490,6 @@ EXERCISE_LIBRARY = [
 
 
 
-
-
 import random
 
 def get_exercise(muscle, ex_type=None, equipment=None, used_exercises=None):
