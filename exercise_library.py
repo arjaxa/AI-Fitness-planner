@@ -1216,7 +1216,7 @@ EXERCISE_LIBRARY = [
         "primary": "back",
         "secondary": ["biceps"],
         "type": "compound",
-        "equipment": "barbell",
+        "equipment": "machine",
         "fatigue": 3,
         "pattern": "row"
     },
@@ -1235,11 +1235,56 @@ EXERCISE_LIBRARY = [
         "secondary": [],
         "type": "isolation",
         "equipment": "dumbbell",
-        "fatigue": 2,# later...back/bi/tri/for/abs/gl
+        "fatigue": 2,
+        "pattern": "row"
+    },
+    {
+        "name": "Cable reverse row",
+        "primary": "back",
+        "secondary": ["biceps"],
+        "type": "compound",
+        "equipment": "cable",
+        "fatigue": 2,
+        "pattern": "row"
+    },
+    {
+        "name": "Cable row (straight bar)",
+        "primary": "back",
+        "secondary": ["biceps"],
+        "type": "compound",
+        "equipment": "cable",
+        "fatigue": 2,
+        "pattern": "row"
+    },
+    {
+        "name": "Cable single arm row",
+        "primary": "back",
+        "secondary": [],
+        "type": "isolation",
+        "equipment": "cable",
+        "fatigue": 2,
         "pattern": "row"
     },
     {
         "name": "Pull-up",
+        "primary": "back",
+        "secondary": ["biceps"],
+        "type": "compound",
+        "equipment": "bodyweight",
+        "fatigue": 3,
+        "pattern": "pullup"
+    },
+    {
+        "name": "Pull-up (reverse grip)",
+        "primary": "back",
+        "secondary": ["biceps"],
+        "type": "compound",
+        "equipment": "bodyweight",
+        "fatigue": 3,
+        "pattern": "pullup"
+    },
+    {
+        "name": "Pull-up (parallel grip)",
         "primary": "back",
         "secondary": ["biceps"],
         "type": "compound",
