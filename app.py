@@ -120,6 +120,15 @@ def generate_plan(selected_split, goal, experience_key):
 
     for day, exercises in selected_split.items():
 
+        # superset limit
+        limits = {
+            "beginner": 1,
+            "intermediate": 2,
+            "advanced": 3
+        }
+        superset_limit = limits.get(experience_key, 1)
+        superset_count = 0
+
         used_exercises_today = set()
         day_plan = []
 
@@ -156,7 +165,7 @@ def generate_plan(selected_split, goal, experience_key):
             # pairing
             for idx, ex2 in enumerate(remaining):
 
-                if should_superset(ex1, ex2):
+                if should_superset(ex1, ex2) and superset_count < superset_limit:
                     partner_index = idx
                     break
 
@@ -177,6 +186,7 @@ def generate_plan(selected_split, goal, experience_key):
                     "mode": "superset",
                     "exercises": [ex1, ex2]
                 })
+                superset_count += 1
 
             
             else:

@@ -17,6 +17,7 @@ custom_splits = {
                     ],
                     "Day 2": [
             ("quads", "isolation", "machine"),
+            ("quads", "isolation", "machine"),
             ("quads", "compound", "barbell"),
             ("quads", "compound", "dumbbell"),
             ("hamstring", "compound", "barbell"),
