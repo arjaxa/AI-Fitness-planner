@@ -1158,6 +1158,24 @@ EXERCISE_LIBRARY = [
         "fatigue": 2,
         "pattern": "press"
     },
+    {
+        "name": "BB bench press (narrow grip)",
+        "primary": "triceps",
+        "secondary": ["chest"],
+        "type": "compound",
+        "equipment": "barbell",
+        "fatigue": 2,
+        "pattern": "press"
+    },
+    {
+        "name": "BB tricep extension (bench)",
+        "primary": "triceps",
+        "secondary": ["chest"],
+        "type": "compound",
+        "equipment": "barbell",
+        "fatigue": 2,
+        "pattern": "extension"
+    },
      {
         "name": "DB Tricep Kickback",
         "primary": "triceps",
@@ -1165,7 +1183,16 @@ EXERCISE_LIBRARY = [
         "type": "isolation",
         "equipment": "dumbbell",
         "fatigue": 1,
-        "pattern": "kickback"
+        "pattern": "extension"
+    },
+    {
+        "name": "DB overhead tricep extension",
+        "primary": "triceps",
+        "secondary": [],
+        "type": "isolation",
+        "equipment": "dumbbell",
+        "fatigue": 1,
+        "pattern": "extension"
     },
     {
         "name": "Cable Rope Tricep Pushdown",
@@ -1176,6 +1203,24 @@ EXERCISE_LIBRARY = [
         "fatigue": 1,
         "pattern": "pushdown"
     },
+    {
+        "name": "Cable (straight bar) Tricep Pushdown",
+        "primary": "triceps",
+        "secondary": [],
+        "type": "isolation",
+        "equipment": "cable",
+        "fatigue": 1,
+        "pattern": "pushdown"
+    },
+    {
+        "name": "Cable overhead tricep extension",
+        "primary": "triceps",
+        "secondary": [],
+        "type": "isolation",
+        "equipment": "cable",
+        "fatigue": 1,
+        "pattern": "extension"
+    },
      {
         "name": "Tricep Dips",
         "primary": "triceps",
@@ -1184,6 +1229,15 @@ EXERCISE_LIBRARY = [
         "equipment": "bodyweight",
         "fatigue": 3,
         "pattern": "dip"
+    },
+    {
+        "name": "Diamond push-up",
+        "primary": "triceps",
+        "secondary": ["chest"],
+        "type": "compound",
+        "equipment": "bodyweight",
+        "fatigue": 3,
+        "pattern": "press"
     },
     # BACK
     {
