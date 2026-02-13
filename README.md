@@ -59,7 +59,7 @@ streamlit run app.py
 * User profiles and saved plans
 * Expanded exercise library
 
----
+
 
 
 
