@@ -209,55 +209,74 @@ def generate_plan(selected_split, goal, experience_key):
 
 
 # plan to pdf
+from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer
+from reportlab.lib.styles import getSampleStyleSheet
+from io import BytesIO
+
+
 def plan_to_pdf(plan):
+
     buffer = BytesIO()
-    c = canvas.Canvas(buffer, pagesize=A4)
-    width, height = A4
 
-    x = 40
-    y = height - 40
+    doc = SimpleDocTemplate(
+        buffer,
+    pagesize=A4,
+    rightMargin=40,
+    leftMargin=40,
+    topMargin=40,
+    bottomMargin=40
+    )
 
-    for day, exercises in plan.items():
-        c.setFont("Helvetica-Bold", 12)
-        c.drawString(x, y, day)
-        y -= 20
+    styles = getSampleStyleSheet()
 
-        c.setFont("Helvetica", 10)
-    for group in exercises:
+    story = []
 
-     if group["mode"] == "superset":
-        c.drawString(x + 10, y, "Superset:")
-        y -= 15
+    for day, groups in plan.items():
 
-        for ex in group["exercises"]:
-            c.drawString(
-                x + 20,
-                y,
-                f"- {ex['name']} ({ex['sets']} | {ex['reps']})"
-            )
-            y -= 15
+        # Day title
+        story.append(Paragraph(f"<b>{day}</b>", styles["Heading2"]))
+        story.append(Spacer(1, 10))
 
-    else:
-        ex = group["exercises"][0]
+        workout_number = 1
 
-        c.drawString(
-            x + 10,
-            y,
-            f"- {ex['name']} ({ex['sets']} | {ex['reps']})"
-        )
-        y -= 15
+        for group in groups:
+
+            if group["mode"] == "single":
+
+                ex = group["exercises"][0]
+
+                text = f"""
+                <b>{workout_number}. {ex['name']}</b>
+                — {ex['sets']} x {ex['reps']}
+                """
+
+                story.append(Paragraph(text, styles["BodyText"]))
 
 
-        if y < 40:
-                c.showPage()
-                c.setFont("Helvetica", 10)
-                y = height - 40
+            elif group["mode"] == "superset":
 
-        y -= 10
+                ex1, ex2 = group["exercises"]
 
-    c.save()
+                text = f"""
+                <b>{workout_number}. {ex1['name']}</b>
+                — {ex1['sets']} x {ex1['reps']}<br/>
+                + {ex2['name']}
+                — {ex2['sets']} x {ex2['reps']}
+                """
+
+                story.append(Paragraph(text, styles["BodyText"]))
+
+            story.append(Spacer(1, 6))
+            workout_number += 1
+
+        story.append(Spacer(1, 18))
+
+    doc.build(story)
+
     buffer.seek(0)
+
     return buffer
+
  
 
 
