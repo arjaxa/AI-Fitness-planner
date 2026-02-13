@@ -937,6 +937,24 @@ EXERCISE_LIBRARY = [
         "fatigue": 2,
         "pattern": "press"
     },
+    {
+        "name": "Parallel DB Shoulder Press",
+        "primary": "shoulder",
+        "secondary": [],
+        "type": "isolation",
+        "equipment": "dumbbell",
+        "fatigue": 2,
+        "pattern": "press"
+    },
+    {
+        "name": "Seated BB Shoulder Press",
+        "primary": "shoulder",
+        "secondary": [],
+        "type": "isolation",
+        "equipment": "dumbbell",
+        "fatigue": 2,
+        "pattern": "press"
+    },
     # FRONT
     {
         "name": "Seated DB front raise",
@@ -949,7 +967,7 @@ EXERCISE_LIBRARY = [
     },
     {
         "name": "DB front raise",
-        "primary": "shoulder",
+        "primary": "shoulder_f",
         "secondary": [],
         "type": "isolation",
         "equipment": "dumbbell",
@@ -958,7 +976,7 @@ EXERCISE_LIBRARY = [
     },
     {
         "name": "Cable front raise",
-        "primary": "shoulder",
+        "primary": "shoulder_f",
         "secondary": [],
         "type": "isolation",
         "equipment": "cable",
@@ -967,7 +985,7 @@ EXERCISE_LIBRARY = [
     },
     {
         "name": "BB front raise",
-        "primary": "shoulder",
+        "primary": "shoulder_f",
         "secondary": [],
         "type": "isolation",
         "equipment": "barbell",
@@ -976,7 +994,7 @@ EXERCISE_LIBRARY = [
     },
     {
         "name": "BB upright row",
-        "primary": "shoulder",
+        "primary": "shoulder_f",
         "secondary": [],
         "type": "isolation",
         "equipment": "barbell",
@@ -985,7 +1003,7 @@ EXERCISE_LIBRARY = [
     },
     {
         "name": "DB upright row",
-        "primary": "shoulder",
+        "primary": "shoulder_f",
         "secondary": [],
         "type": "isolation",
         "equipment": "dumbbell",
@@ -994,16 +1012,17 @@ EXERCISE_LIBRARY = [
     },
     {
         "name": "Cable upright row",
-        "primary": "shoulder",
+        "primary": "shoulder_f",
         "secondary": [],
         "type": "isolation",
         "equipment": "cable",
         "fatigue": 2,
         "pattern": "raise"
     },
+    # lateral
     {
         "name": "Seated DB lateral raise",
-        "primary": "shoulder",
+        "primary": "shoulder_l",
         "secondary": [],
         "type": "isolation",
         "equipment": "dumbbell",
@@ -1012,7 +1031,7 @@ EXERCISE_LIBRARY = [
     },
     {
         "name": "DB lateral raise",
-        "primary": "shoulder",
+        "primary": "shoulder_l",
         "secondary": [],
         "type": "isolation",
         "equipment": "dumbbell",
@@ -1022,7 +1041,7 @@ EXERCISE_LIBRARY = [
     {
         "name": "Cable lateral raise",
         "secondary": [],
-        "primary": "shoulder",
+        "primary": "shoulder_l",
         "type": "isolation",
         "equipment": "cable",
         "fatigue": 2,
@@ -1031,7 +1050,7 @@ EXERCISE_LIBRARY = [
     # REAR DELT
      {
         "name": "DB Fly back",
-        "primary": "shoulder",
+        "primary": "shoulder_r",
         "secondary": [],
         "type": "isolation",
         "equipment": "dumbbell",
@@ -1040,7 +1059,7 @@ EXERCISE_LIBRARY = [
     },
     {
         "name": "Seated DB rear delt fly",
-        "primary": "shoulder",
+        "primary": "shoulder_r",
         "secondary": [],
         "type": "isolation",
         "equipment": "dumbbell",
@@ -1049,7 +1068,7 @@ EXERCISE_LIBRARY = [
     },
     {
         "name": "Bent-over DB rear delt fly",
-        "primary": "shoulder",
+        "primary": "shoulder_r",
         "secondary": [],
         "type": "isolation",
         "equipment": "dumbbell",
@@ -1058,7 +1077,7 @@ EXERCISE_LIBRARY = [
     },
     {
         "name": "DB rear delt press",
-        "primary": "shoulder",
+        "primary": "shoulder_r",
         "secondary": [],
         "type": "isolation",
         "equipment": "dumbbell",
@@ -1067,7 +1086,7 @@ EXERCISE_LIBRARY = [
     },
     {
         "name": "Cable rear delt fly",
-        "primary": "shoulder",
+        "primary": "shoulder_r",
         "secondary": [],
         "type": "isolation",
         "equipment": "cable",
@@ -1076,7 +1095,7 @@ EXERCISE_LIBRARY = [
     },
     {
         "name": "Reverse fly machine",
-        "primary": "shoulder",
+        "primary": "shoulder_r",
         "secondary": [],
         "type": "isolation",
         "equipment": "cable",
@@ -1085,7 +1104,7 @@ EXERCISE_LIBRARY = [
     },
     {
         "name": "Cable rear delt fly (single arm)",
-        "primary": "shoulder",
+        "primary": "shoulder_r",
         "secondary": [],
         "type": "isolation",
         "equipment": "cable",
