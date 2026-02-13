@@ -1204,6 +1204,15 @@ EXERCISE_LIBRARY = [
         "pattern": "pushdown"
     },
     {
+        "name": "Cable single arm tricep pushdown (D-handle)",
+        "primary": "triceps",
+        "secondary": [],
+        "type": "isolation",
+        "equipment": "cable",
+        "fatigue": 1,
+        "pattern": "pushdown"
+    },
+    {
         "name": "Cable (straight bar) Tricep Pushdown",
         "primary": "triceps",
         "secondary": [],
