@@ -2758,6 +2758,16 @@ custom_splits = {
             "beginner": [],
             "intermediate": [],
             "advanced": []
+        },
+        "strength": {
+            "beginner": [],
+            "intermediate": [],
+            "advanced": []
+        },
+        "fat_loss": {
+            "beginner": [],
+            "intermediate": [],
+            "advanced": []
         }
     }
 }
