@@ -27,6 +27,7 @@ https://arisplan.streamlit.app/
 ## Tech Stack
 
 * **Python** — core logic
+* **Scikit-Learn** — exercise pairing
 * **Streamlit** — user interface and deployment
 * **ReportLab** — PDF generation
 
