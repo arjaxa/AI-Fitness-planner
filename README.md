@@ -24,6 +24,18 @@ https://arisplan.streamlit.app/
 
 ---
 
+
+## Screenshots
+
+<img width="1847" height="807" alt="Screenshot 2026-05-10 183808" src="https://github.com/user-attachments/assets/1f4f88d2-6dc5-4e48-93a3-26d49571aa10" />
+
+<img width="1848" height="839" alt="Screenshot 2026-05-10 183912" src="https://github.com/user-attachments/assets/89afcbb3-238f-43c0-a1c0-2747d3c461de" />
+
+<img width="1848" height="829" alt="Screenshot 2026-05-10 183939" src="https://github.com/user-attachments/assets/0311f74b-2df0-481b-826e-60622ed44aa6" />
+
+
+
+
 ## Tech Stack
 
 * **Python** — core logic
@@ -42,13 +54,6 @@ cd ai-fitness-planner
 pip install -r requirements.txt
 streamlit run app.py
 ```
-
-## Screenshots
-
-<img width="1085" height="769" alt="Screenshot 2026-02-13 134750" src="https://github.com/user-attachments/assets/0c58ae12-e81c-42be-97c9-ce88d3bcaad2" />
-
-<img width="1157" height="631" alt="Screenshot 2026-02-13 135333" src="https://github.com/user-attachments/assets/ec120783-3f87-448d-996d-c4555caaf979" />
-
 
 ---
 
