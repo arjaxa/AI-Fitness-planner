@@ -20,7 +20,7 @@ ArisPlan creates personalized gym routines based on user goals and experience le
 
 ## Live App
 
-https://arisplan.streamlit.app/
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://arisplan.streamlit.app/)
 
 ---
 
